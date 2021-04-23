@@ -1,4 +1,4 @@
-3. Vloz vsechna suda cisla vetsi nez 0, mensi nez 100 do pole a pole vypis. (obtiznost 2)
+/*3. Vloz vsechna suda cisla vetsi nez 0, mensi nez 100 do pole a pole vypis. (obtiznost 2)
 Vysledek: 
 [
   0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20,
@@ -7,6 +7,7 @@ Vysledek:
  66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86,
  88, 90, 92, 94, 96, 98
 ]
+*/
 
 let pole = [];
 for (let i = 0; i < 100; i += 2) {
