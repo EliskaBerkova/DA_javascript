@@ -15,7 +15,7 @@ for (let i = 0; i < delka; i = i + 1) {
 }
 // a vypis: 
 // a) cele pole, (obtiznost 1)
-console.log(`Pole nahodne vygenerovanych cisel> ${numbers}`);
+console.log(`Pole nahodne vygenerovanych cisel: ${numbers}`);
 
 // b) delku pole (obtiznost 1)
 console.log(`Delka pole: ${numbers.length}`);
@@ -27,10 +27,23 @@ console.log(`Prvni prvek pole: ${numbers[0]}`);
 console.log(`Posledni prvek pole: ${numbers[numbers.length - 1]}`);
 
 // e) nejvetsi cislo, (obtiznost 2)
-console.log(`Nejvetsi cislo v poli: ${Math.max(...numbers)}`);
+let nejvetsiCislo = numbers[0]
+for (let i = 0; i < delka; i++) {
+    if (numbers[i] > nejvetsiCislo) (
+        nejvetsiCislo = numbers[i]
+    )
+}
+console.log(`Nejvetsi cislo v poli: ${nejvetsiCislo}`);
 
 // f) nejmensi cislo, (obtiznost 2)
-console.log(`Nejmensi cislo v poli: ${Math.min(...numbers)}`);
+let nejmensiCislo = numbers[0]
+for (let i = 0; i < delka; i++) {
+    if (numbers[i] < nejmensiCislo) (
+        nejmensiCislo = numbers[i]
+    )
+}
+console.log(`Nejmensi cislo v poli: ${nejmensiCislo}`);
+
 
 // g) soucet cisel, (obtiznost 2)
 let soucet = 0;
@@ -40,7 +53,7 @@ for (let i = 0; i < delka; i++) {
 console.log(`Soucet vsech cisel v poli je: ${soucet}`)
 
 // h) rozdil nejvetsiho a nejmensiho cisla (obtiznost 3)
-let rozdil = Math.max(...numbers) - Math.min(...numbers);
+let rozdil = nejvetsiCislo - nejmensiCislo;
 console.log(`Rozdil nejvetsiho a nejmensiho cisla pole je: ${rozdil}`)
 
 // i) prumer vsech cisel v poli (obtiznost 3)
